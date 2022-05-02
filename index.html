@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>topo pizza a luca</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+  </head>
+  <body style="text-align: center">
+    <img src="img/topo.png">
+    <p><canvas id="unity-canvas" width=720 height=480 style="width: 720px; height: 480px; background: #E9692C"></canvas></p>
+    <h1>próximamente</h1>
+    <script src="Build/topogood.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/topogood.data",
+        frameworkUrl: "Build/topogood.framework.js",
+        codeUrl: "Build/topogood.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "interactive rib",
+        productName: "topo pizza",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
